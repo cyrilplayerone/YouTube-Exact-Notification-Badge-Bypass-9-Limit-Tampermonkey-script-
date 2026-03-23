@@ -1,0 +1,2 @@
+# YouTube-Exact-Notification-Badge-Bypass-9-Limit-Tampermonkey-script-
+🔔 Tampermonkey userscript: Bypass the "9+" limit! Forces the YouTube bell to show the exact unread count by extracting it from the tab title. / Script Tampermonkey : Contournez la limite "9+" ! Affiche le nombre exact de notifications sur la cloche YouTube en le récupérant depuis le titre de l'onglet. Script by csrrrr aka Cyrilplayerone 🚀
