@@ -53,7 +53,7 @@ ___________________________________________________________________________
 ___________________________________________________________________________
 
 
-### 🇬🇧 English Description
+### 🇺🇸 English Description
 
 Tired of seeing **"9+"** on your YouTube notification bell when you actually have 37 unread notifications? 
 
