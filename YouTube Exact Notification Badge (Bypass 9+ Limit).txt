@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         YouTube Exact Notification Badge (Bypass 9+ Limit)
 // @namespace    yt-bell-from-title
+// @author       Cyrilplayerone
 // @match        *://*.youtube.com/*
 // @grant        none
 // @run-at       document-idle
