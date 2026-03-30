@@ -1,0 +1,33 @@
+// ==UserScript==
+// @name         YouTube Exact Notification Badge (Bypass 9+ Limit)
+// @namespace    yt-bell-from-title
+// @match        *://*.youtube.com/*
+// @grant        none
+// @run-at       document-idle
+// ==/UserScript==
+
+(function () {
+    'use strict';
+
+    function forceUpdateBell() {
+        // On récupère le nombre entre parenthèses au début du titre
+        const m = document.title.match(/^\((\d+)\)\s+/);
+        if (!m) return;
+
+        const count = m[1];
+
+        // On cible ta fameuse bulle
+        const badges = document.querySelectorAll('.yt-spec-icon-badge-shape__badge');
+
+        badges.forEach(badge => {
+            if (badge.textContent !== count) {
+                badge.textContent = count;
+            }
+        });
+    }
+
+    // Boucle de sécurité (500ms) pour empêcher YouTube ou d'autres scripts d'écraser le chiffre
+    setInterval(forceUpdateBell, 500);
+
+})();
+ 
