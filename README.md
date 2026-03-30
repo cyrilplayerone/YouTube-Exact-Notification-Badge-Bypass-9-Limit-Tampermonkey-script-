@@ -9,46 +9,6 @@
 
 [![Install with Tampermonkey]
 
-___________________________________________________________________________
-
-
-// ==UserScript==
-// @name         YouTube Exact Notification Badge (Bypass 9+ Limit)
-// @namespace    yt-exact-bell-badge
-// @version      1.0
-// @description  Forces the YouTube notification bell to show the exact number of unread notifications instead of "9+" by extracting it from the tab title.
-// @author       Cyrilplayerone
-// @match        *://*.youtube.com/*
-// @grant        none
-// @run-at       document-idle
-// @license      MIT
-// ==/UserScript==
-
-(function () {
-    'use strict';
-
-    function forceUpdateBell() {
-        // Extract the exact notification count from the document title (e.g., "(37) YouTube")
-        const m = document.title.match(/^\((\d+)\)\s+/);
-        if (!m) return;
-        
-        const count = m[1];
-        
-        // Target the YouTube bell badge
-        const badges = document.querySelectorAll('.yt-spec-icon-badge-shape__badge');
-        
-        badges.forEach(badge => {
-            if (badge.textContent !== count) {
-                badge.textContent = count;
-            }
-        });
-    }
-
-    // Run every 500ms to prevent YouTube's dynamic frontend from reverting to "9+"
-    setInterval(forceUpdateBell, 500);
-
-})();
-
 
 ___________________________________________________________________________
 
